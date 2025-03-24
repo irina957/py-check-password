@@ -11,7 +11,11 @@ from app.main import check_password
                           ("passsWOrd1", False),
                           ("pass@WOrddpass@WOrddd", False),
                           ("pass@WOrd1.", False),
-                          ("пар@WOrd1.", False)
+                          ("пар@WOrd1.", False),
+                          ("Pass@w1r", True),
+                          ("Pass@word1111111", True),
+                          ("", False),
+                          ("Pard1$@#&!-_", True)
                           ])
 def test_check_passwords_with_different_data(
         passwords: str, expected: bool) -> None:
